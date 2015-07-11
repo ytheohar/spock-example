@@ -15,22 +15,6 @@ import spock.lang.*
 
 class SalarySpec extends Specification {
 
-	def "Modify an employee's salary " () {
-		given: "the salary management system is initialized with the following data"
-			[
-				[1, 'donald', 60000.0],
-				[2, 'dewie', 62000.0],
-				[3, 'goofy', 55000.0],
-				[4, 'scrooge', 70000.0],
-				[5, 'daisy', 56000.0],
-				[6, 'minnie', 62000.0],
-				[7, 'mickey', 51000.0],
-				[8, 'fethry', 66500.0]
-			]
-		when: "the boss increases the salary for the employee with id '3' by 5%"
-		then: "the payroll for the employee with id '3' should display a salary of 57750"
-	}
-	
 	def "Modify an employee's salary" () {
 		given: "the salary management system is initialized with the following data"
 			def data = [
@@ -54,7 +38,7 @@ class SalarySpec extends Specification {
 	}
 
 	@Unroll
-	def "Modify the salary employee #id by #percent percent" () {
+	def "Modify the salary employee #id by #percent percent " () {
 		given: "the salary management system is initialized with the following data"
 			def data = [
 				[1, 'donald', 60000.0],
